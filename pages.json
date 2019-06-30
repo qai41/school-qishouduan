@@ -1,0 +1,57 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path" : "pages/loding/loding",
+			"style" : {
+				"navigationStyle":	"custom",
+				"app-plus": {  
+					"titleNView": false 
+				}  
+			}
+		},
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "首页"
+			}
+		}
+	    ,	{
+            "path" : "pages/index/OrderDetails/OrderDetails",
+            "style" : {
+				"navigationBarTitleText":"订单详情"
+			}
+        }
+        ,{
+            "path" : "components/bg-login/bg-login",
+            "style" : {
+				
+			}
+        }
+        ,{
+            "path" : "pages/loding/registered/registered",
+            "style" : {
+				"navigationBarTitleText": "注册"
+			}
+        },
+		{
+            "path" : "pages/loding/AccountLogin/AccountLogin",
+            "style" : {
+				"navigationBarTitleText": "密码登陆"
+			}
+			
+        },
+		{
+            "path" : "pages/loding/wangji/wangji",
+            "style" : {
+				"navigationBarTitleText": "找回密码"
+			}
+			
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "首页",
+		"navigationBarBackgroundColor": "#1A7AFC",
+		"backgroundColor": "#f2f2f2"
+	}
+}

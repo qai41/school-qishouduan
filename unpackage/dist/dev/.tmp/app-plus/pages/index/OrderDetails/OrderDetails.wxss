@@ -1,0 +1,136 @@
+.page.data-v-02dd1234 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #F2F2F2;
+}
+.page .delivery.data-v-02dd1234 {
+    width: 100%;
+    font-size: 32rpx;
+    color: #333333;
+    line-height: 88rpx;
+    background-color: #ffffff;
+    text-align: center;
+    margin-bottom: 20rpx;
+}
+.page .orderderails.data-v-02dd1234 {
+    padding: 0 30rpx;
+    padding-top: 30rpx;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+.page .orderderails .few.data-v-02dd1234 {
+      color: #333333;
+      font-weight: Bold;
+}
+.page .orderderails .few text.data-v-02dd1234 {
+        font-size: 26rpx;
+        line-height: 36rpx;
+}
+.page .orderderails .few text.data-v-02dd1234:first-child {
+          font-size: 40rpx;
+}
+.page .orderderails .few text.data-v-02dd1234:first-child::before {
+            width: 12rpx;
+            height: 12rpx;
+            display: inline-block;
+            content: '';
+            background-color: #1A7AFC;
+            position: relative;
+            top: -12rpx;
+            margin-right: 30rpx;
+}
+.page .orderderails .few text.data-v-02dd1234:last-child {
+          font-size: 40rpx;
+          color: #DE3535;
+}
+.page .orderderails .adderss .ad_left.data-v-02dd1234 {
+      margin-top: 28rpx;
+      margin-bottom: 34rpx;
+}
+.page .orderderails .adderss .ad_left view.data-v-02dd1234 {
+        width: 64rpx;
+        font-size: 22rpx;
+        text-align: center;
+        color: #777777;
+        line-height: 36rpx;
+        overflow: hidden;
+}
+.page .orderderails .adderss .ad_left view.data-v-02dd1234:first-child::after {
+          position: relative;
+          left: 32rpx;
+          margin: 12rpx 0;
+          display: block;
+          content: '';
+          width: 2rpx;
+          height: 56rpx;
+          background-color: #CCCCCC;
+}
+.page .orderderails .adderss .ad_right.data-v-02dd1234 {
+      padding: 30rpx 30rpx;
+      overflow: hidden;
+      clear: both;
+}
+.page .orderderails .adderss .ad_right view.data-v-02dd1234 {
+        font-size: 28rpx;
+        color: #333333;
+        line-height: 36rpx;
+        font-weight: 800;
+}
+.page .orderderails .adderss .ad_right .ac.data-v-02dd1234 {
+        margin-top: 12rpx;
+        margin-bottom: 30rpx;
+        font-size: 24rpx;
+        color: #777777;
+        font-weight: 500;
+}
+.page .orderderails .article.data-v-02dd1234 {
+      background-color: #F5F5F5;
+      font-size: 30rpx;
+      color: #555555;
+      padding-top: 20rpx;
+      margin-bottom: 30rpx;
+}
+.page .orderderails .article .items.data-v-02dd1234 {
+        padding-left: 20rpx;
+        padding-right: 86rpx;
+        margin-bottom: 30rpx;
+        line-height: 36rpx;
+}
+.page .orderderails .article .items text.data-v-02dd1234 {
+          color: #555555;
+}
+.page .orderderails .article .items .article_name.data-v-02dd1234 {
+          width: 268rpx;
+          height: 68rpx;
+          overflow: hidden;
+}
+.page .orderderails .article .items .article_count.data-v-02dd1234 {
+          font-size: 32rpx;
+}
+.page .orderderails .article .items .article_pir.data-v-02dd1234 {
+          color: #DE3535;
+          margin-left: 200rpx;
+}
+.page .orderderails .rm.data-v-02dd1234 {
+      color: #333333;
+      line-height: 36rpx;
+      margin-bottom: 30rpx;
+}
+.page .option.data-v-02dd1234 {
+    height: 88rpx;
+    margin-bottom: 0;
+    border-top: 2rpx solid #E6E6E6;
+    background-color: #ffffff;
+}
+.page .option view.data-v-02dd1234 {
+      width: 33.33%;
+      height: 100%;
+      text-align: center;
+      color: #333333;
+      font-weight: bold;
+      line-height: 88rpx;
+}
+

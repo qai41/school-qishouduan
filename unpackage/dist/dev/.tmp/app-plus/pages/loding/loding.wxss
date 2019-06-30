@@ -1,0 +1,54 @@
+.loding {
+  width: 100%;
+  overflow: hidden;
+}
+.loding .content {
+    background-color: #fff;
+    -webkit-border-top-left-radius: 20rpx;
+            border-top-left-radius: 20rpx;
+    -webkit-border-top-right-radius: 20rpx;
+            border-top-right-radius: 20rpx;
+    -webkit-transform: translateY(-10px);
+        -ms-transform: translateY(-10px);
+            transform: translateY(-10px);
+    padding: 30rpx 30rpx 0 48rpx;
+    overflow: hidden;
+}
+.loding .content .p_log {
+      font-size: 46rpx;
+      color: #333333;
+      font-weight: 800;
+      margin-bottom: 30rpx;
+}
+.loding .content .p_log .registered {
+        color: #777777;
+        font-size: 32rpx;
+}
+.loding .content .p_log .registered:after {
+          display: inline-block;
+          content: '';
+          width: 12rpx;
+          height: 20rpx;
+          background-color: #1A7AFC;
+          margin-left: 20rpx;
+}
+.loding .content .login {
+      height: 88rpx;
+      background-color: #AAAAAA;
+      font-size: 46rpx;
+      line-height: 88rpx;
+      text-align: center;
+      margin-top: 80rpx;
+      color: #fff;
+}
+.loding .content .login.active {
+        background-color: #1A7AFC;
+}
+.loding .content .pwd_login {
+      display: block;
+      font-size: 36rpx;
+      line-height: 150rpx;
+      text-align: center;
+      color: #333333;
+}
+

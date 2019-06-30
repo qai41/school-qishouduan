@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+    <head>
+        <meta charset="UTF-8" />
+        <script>
+            var coverSupport = 'CSS' in window && typeof CSS.supports === 'function' && (CSS.supports('top: env(a)') ||
+                CSS.supports('top: constant(a)'))
+            document.write(
+                '<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0' +
+                (coverSupport ? ', viewport-fit=cover' : '') + '" />')
+        </script>
+        <title>View</title>
+        <style>
+            * {
+                -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                -webkit-tap-highlight-color: transparent;
+            }
+
+            input[type="search"i]::-webkit-search-cancel-button {
+                display: none;
+            }
+        </style>
+        <script>
+            var __wxConfig = {"debug":false,"appname":"graceUI2","entryPagePath":"pages/loding/loding.html","page":{"pages/loding/loding.html":{"window":{"usingComponents":{},"navigationStyle":"custom","titleNView":false}},"pages/index/index.html":{"window":{"usingComponents":{},"navigationBarTitleText":"首页"}},"pages/index/OrderDetails/OrderDetails.html":{"window":{"usingComponents":{},"navigationBarTitleText":"订单详情"}},"components/bg-login/bg-login.html":{"window":{"usingComponents":{}}},"pages/loding/registered/registered.html":{"window":{"usingComponents":{},"navigationBarTitleText":"注册"}},"pages/loding/AccountLogin/AccountLogin.html":{"window":{"usingComponents":{},"navigationBarTitleText":"密码登陆"}},"pages/loding/wangji/wangji.html":{"window":{"usingComponents":{},"navigationBarTitleText":"找回密码"}}},"global":{"window":{"navigationBarTextStyle":"white","navigationBarTitleText":"首页","navigationBarBackgroundColor":"#1A7AFC","backgroundColor":"#f2f2f2"}},"tabBar":{"color":"","selectedColor":"","backgroundColor":"","borderStyle":"black","list":[],"position":"bottom"},"networkTimeout":{"request":60000,"connectSocket":60000,"uploadFile":60000,"downloadFile":60000},"platform":"devtools","pages":["pages/loding/loding","pages/index/index","pages/index/OrderDetails/OrderDetails","components/bg-login/bg-login","pages/loding/registered/registered","pages/loding/AccountLogin/AccountLogin","pages/loding/wangji/wangji"],"subPackages":[],"usingComponents":{},"nvueCompiler":"weex","splashscreen":{"alwaysShowBeforeRender":true,"autoclose":false},"compilerVersion":"2.0.1"}
+        </script>
+        <script>
+            var __id__ = '';
+            window.__dispatchGenerateFunc__ = function(page) {
+                __id__ = page;
+                document.title = page;
+                // window.history.pushState('', '', page);
+                var wxss = page.replace('.html', '.wxss')
+                if (
+                    typeof __wxAppCode__ !== 'undefined' &&
+                    __wxAppCode__.hasOwnProperty(wxss)
+                ) {
+                    var setCssToHead = __wxAppCode__[wxss]
+                    typeof setCssToHead === 'function' && setCssToHead()
+                    document.dispatchEvent(new CustomEvent("generateFuncReady", {
+                        detail: {
+                            generateFunc: $gwx(page.replace('.html', '.wxml'))
+                        }
+                    }));
+                } else {
+                    plus.webview.currentWebview().setJsFile('_www/' + page.replace('.html', '.js'));
+                }
+            };
+        </script>
+        <script src="__uniappes6.js"></script>
+        <script src="uniapp://ready"></script>
+    </head>
+
+    <body>
+        <div></div>
+    </body>
+
+</html>

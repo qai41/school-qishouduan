@@ -1,0 +1,37 @@
+
+page{background: #f2f2f2;color: #333;}
+.f22{font-size: 22rpx;}
+.f24{font-size: 24rpx;}
+.f25{font-size:26rpx;}
+.f28{font-size: 28rpx;}
+.f32{font-size: 32rpx;}
+.f40{font-size: 40rpx;}
+.cblue{color: #1A7AFC;}
+.cred{color: #DE3535;}
+.c77{color: #777;}
+.flex_box_1{-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;-webkit-flex-shrink:1;-ms-flex-negative:1;flex-shrink:1}
+.dan-a,.dan-b{padding:2rpx 30rpx;}
+.grace-margin{margin:0rpx;}
+.demo-img{padding:8rpx 0;}
+.demo-img image{width:100%; -webkit-border-radius:8rpx; border-radius:8rpx;}
+.grace-tab-title {background: #fff;}
+.grace-tab-title uni-view{margin:0;border-bottom: none;width:50%;padding:0;font-weight: normal;text-align: center;position: relative;}
+.grace-tab-title uni-view.nums{position: absolute;width: 26rpx;height: 26rpx;line-height: 26rpx;font-size: 20rpx;  background: #DE3535;color: #fff;-webkit-border-radius: 50%;border-radius: 50%;left: auto;top:14rpx;
+}
+.grace-tab-title .grace-tab-current{border-bottom: none !important;color: #1A7AFC;}
+#tabTag-1 .nums{display: none;}
+.dan-list .items{background: #fff;margin: 20rpx 0;}
+.g_floor{font-size:40rpx;color: #333;position: relative;padding-left: 36rpx;}
+.g_floor:after{width: 12rpx;height: 12rpx;-webkit-border-radius: 50%;border-radius: 50%; background: #1A7AFC;content: '';position: absolute;left: 0;top:50%;margin-top:-6rpx;}
+.dan-b .desc{padding-left: 57rpx;}
+.dan-b .cell{margin-bottom: 40rpx;}
+.dan-b:after{content: '';border-left:1px dashed rgba(204,204,204,1);width: 1px;left:47rpx;top:35rpx;bottom: 55rpx;position: absolute;content: '';}
+.vtags{background: #fff;position: relative;z-index: 2;}
+.dan-c{border-top: 1rpx solid #E6E6E6;}
+.dan-c .cell{ width: 100%;text-align: center;height:88rpx; border-left: 1rpx solid #E6E6E6;line-height: 88rpx;}
+.dan-c .cell:first-child{border-left: none;}
+.grace-tab-swiper{height: -webkit-calc(100vh - 44px - 80rpx);height: calc(100vh - 44px - 80rpx);}
+.swiper-item,scroll-view{overflow-y: auto;height: 100%;}
+.dan-date{color: #aaa;padding:0rpx 30rpx;}
+.dan-list:first-child .dan-date{padding:15rpx 30rpx;margin-bottom: -20rpx;}
+

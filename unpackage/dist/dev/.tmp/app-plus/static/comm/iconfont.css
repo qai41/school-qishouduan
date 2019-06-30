@@ -1,0 +1,20 @@
+@font-face {font-family: "eosfont";
+		src:  url('//at.alicdn.com/t/font_1260216_is7vpu94ogr.ttf') format('truetype'),
+}
+
+.eosfont{
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-iconfontscanning:before {
+  content: "\e65e";
+}
+
+.icon-RectangleCopy:before {
+  content: "\e6a2";
+}
+

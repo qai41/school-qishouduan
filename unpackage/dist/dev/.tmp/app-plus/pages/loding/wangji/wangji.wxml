@@ -1,0 +1,2 @@
+<import src="./wangji.vue.wxml" />
+    <template is="803ae594" data="{{ ...$root['0'], $root }}"/>
