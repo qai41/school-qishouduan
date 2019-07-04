@@ -1,0 +1,14 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "钱包",
+  "titleNView": {
+    "buttons": [
+      {
+        "float": "right",
+        "text": "余额明细",
+        "badgeText": "余额明细",
+        "fontSize": "16px"
+      }
+    ]
+  }
+}

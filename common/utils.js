@@ -95,15 +95,12 @@ export default {
 	},
 	
 	// 动画
-	msg(obj,callback){
+	msg(obj){
 		uni.showToast({
 			title:obj.title,
 			icon: obj.icon || 'none',
 			mask:obj.mask || false,
 			duration: obj.duration || 1500
 		})
-		setTimeout(()=>{
-			callback()
-		},2000)
 	}
 }

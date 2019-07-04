@@ -44,12 +44,15 @@
 				let params = {phone:this.$refs.code.code,password:this.$refs.password.password};//要验证/发送的数据
 				let checkRes = GraceChack.check(params,Inputfule.pwdl);  						//验证是否通过
 				if(checkRes){ //验证成功
+					uni.showLoading({title: '登陆中'});
 					this.$api.login(params).then(res => {
-						console.log(JSON.stringify(res))  //登陆成功 待处理
+						// console.log(JSON.stringify(res))  //登陆成功 待处理
 						if(res.status == 'success' && res.status_code == 200){
-							// this.$mUtils.msg({title:'登陆成功'},function(){
-							// 	
-							// })
+							uni.hideLoading()
+							this.$store.commit('set_token',res.data.token.access_token); //保存token至本地
+							this.$store.commit('set_info',res.data.courier) //保存用户信息至本地
+							this.$mUtils.msg({title:'登陆成功'})
+							this.$mRouterConfig.redirectTo({router:this.$mRouter.home})
 						}
 					})
 				}

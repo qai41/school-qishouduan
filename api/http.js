@@ -1,5 +1,6 @@
 
-function HTTP(obj,config){
+async function HTTP(obj,config){
+	
 	return new Promise((resolve,reject) => {
 		
 		let options = {
@@ -9,10 +10,10 @@ function HTTP(obj,config){
 			data:{},
 			header:{
 				"content-type": "application/x-www-form-urlencoded",
-				"content-type":"application/jsons"
+				"Authorization": 'Bearer '+`${uni.getStorageSync('token')}`
 			},
 			success:(res) => {
-				console.log('请求成功 结果: ',JSON.stringify(res))
+				// console.log('请求成功 结果: ',JSON.stringify(res))
 				// 状态码200表示成功
 				if(res.data.status_code == 200 && res.data.status == 'success'){
 					resolve(res.data);
@@ -30,7 +31,7 @@ function HTTP(obj,config){
 				}
 			},
 			fail:(err)  => {
-				console.log(err);
+				console.log('err++++++++',JSON.stringify(err));
 				uni.showToast({
 					title: '网络异常',
 					icon: 'none',
@@ -41,7 +42,7 @@ function HTTP(obj,config){
 		}
 		
 		options = {...options,...obj};
-		console.log('options+++++',JSON.stringify(options))
+		// console.log('options+++++',JSON.stringify(options))
 		
 		if(options.url && options.method){
 			uni.request(options)

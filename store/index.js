@@ -5,9 +5,9 @@ import $mRouter from '../common/routers.js'		  //页面信息配置
 
 Vue.use(Vuex)
 
-const TONKEN = uni.getStorageSync('token') //获取本地的token
-console.log(TONKEN)
-const USER_INFO = uni.getStorageSync('user_info') //获取本地个人信息
+const TONKEN = uni.getStorageSync('token') || ''//获取本地的token
+// console.log(TONKEN)
+const USER_INFO = uni.getStorageSync('user_info') || {} //获取本地个人信息
 
 const store = new Vuex.Store({
 	state:{

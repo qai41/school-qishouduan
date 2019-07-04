@@ -1,5 +1,6 @@
 
-page{background: #f2f2f2;color: #333;}
+page{background: #f2f2f2;color: #333; position: relative;}
+/* .left-cart{position: absolute;left: 0; top: -200upx;z-index: 999;} */
 .f22{font-size: 22rpx;}
 .f24{font-size: 24rpx;}
 .f25{font-size:26rpx;}

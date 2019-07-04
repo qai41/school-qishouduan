@@ -11,8 +11,8 @@
 			<!-- 工作类型 -->
 			<view class="work_title grace-space-between">
 				<text>请选择工作类型</text>
-				<text :class="[full?'active':'','title1']" @click="changefull">兼职</text>
-				<text :class="[full?'':'active','title1']" @click="changefull">全职</text>
+				<text :class="full?'active title1': 'title1'" @click="changefull(false)">兼职</text>
+				<text :class="!full?'active title1': 'title1'" @click="changefull(true)">全职</text>
 			</view>
 			<!-- 身份证验证 -->
 			<view class="user-car">
@@ -21,11 +21,11 @@
 			<!-- 正反 -->
 			<view class="card grace-rows">
 				<view class="vice grace-columns">
-					<image @click="anti(true)" src="../../../static/LoginImg/user-car.png"></image>
+					<image @click="anti(true)" :src="photo1?photo1:'../../../static/LoginImg/user-car.png'"></image>
 					<text>正面</text>
 				</view>
 				<view class="vice grace-columns">
-					<image @click="anti(false)" src="../../../static/LoginImg/user-car.png"></image>
+					<image @click="anti(false)" :src="photo2?photo1:'../../../static/LoginImg/user-car.png'"></image>
 					<text>反面</text>
 				</view>
 			</view>
@@ -48,7 +48,7 @@
 		name: 'regisrered',
 		data() {
 			return {
-				full: false,
+				full: true,
 				ok: false,
 				photo1:'',
 				photo2:'',
@@ -73,8 +73,8 @@
 			agree(){
 				this.ok = !this.ok
 			},
-			changefull(){
-				this.full = !this.full
+			changefull(isfalse){
+				isfalse? this.full = false: this.full = true
 			},
 			anti(iszheng){
 				uni.chooseImage({ //获取图片

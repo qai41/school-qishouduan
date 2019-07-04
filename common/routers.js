@@ -3,7 +3,7 @@ export default{
 	//没权限的路径
 	codeL:{
 		name: '手机快速登陆',
-		path: '../loding',
+		path: '/pages/loding/loding',
 	},
 	pwdL:{
 		name:'账号密码登陆',
@@ -22,6 +22,21 @@ export default{
 	home:{
 		name: '首页',
 		path: '/pages/index/index',
+		requiresAuth: true
+	},
+	OrderDetails:{
+		name: '订单详情',
+		path: '/pages/index/OrderDetails/OrderDetails',
+		requiresAuth: true
+	},
+	wallet:{
+		name: '钱包',
+		path: '/pages/wallet/wallet',
+		requiresAuth: true
+	},
+	walletdetail:{
+		name: '钱包明细',
+		path: '/pages/wallet/walletdetail/walletdetail',
 		requiresAuth: true
 	}
 }

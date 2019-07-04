@@ -1,0 +1,34 @@
+@font-face {
+  font-family: 'eosfont';  /* project id 1260216 */
+  src: url('https://at.alicdn.com/t/font_1260216_3erliulnvdn.eot');
+  src: url('https://at.alicdn.com/t/font_1260216_3erliulnvdn.eot?#iefix') format('embedded-opentype'),
+  url('https://at.alicdn.com/t/font_1260216_3erliulnvdn.woff2') format('woff2'),
+  url('https://at.alicdn.com/t/font_1260216_3erliulnvdn.woff') format('woff'),
+  url('https://at.alicdn.com/t/font_1260216_3erliulnvdn.ttf') format('truetype'),
+  url('https://at.alicdn.com/t/font_1260216_3erliulnvdn.svg#eosfont') format('svg');
+}
+
+.eosfont {
+  font-family: "eosfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-qianbao:before {
+  content: "\e630";
+}
+
+.icon-caidan:before {
+  content: "\e601";
+}
+
+.icon-qianjin:before {
+  content: "\e615";
+}
+
+.icon-shezhi:before {
+  content: "\e600";
+}
+

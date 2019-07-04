@@ -28,10 +28,10 @@
 				 if(checkRes){//验证成功
 					 this.$api.retrieve(data).then(res => {
 						if(res.status == 'success'&&res.status_code == 200){
-							uni.showToast({
-								title: '修改成功',
-								icon: 'none'
-							})
+							this.$store.commit('set_token',res.data.token.access_token); //保存token至本地
+							this.$store.commit('set_info',res.data.courier) //保存用户信息至本地
+							this.$mUtils.msg({title:'修改成功'})
+							this.$mRouterConfig.redirectTo({router:this.$mRouter.home})
 						}
 						console.log('修改成功',JSON.stringify(res.data))
 					 }) 

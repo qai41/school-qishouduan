@@ -1,12 +1,16 @@
 {
   "pages": [
     "pages/loding/loding",
-    "pages/index/index",
-    "pages/index/OrderDetails/OrderDetails",
-    "components/bg-login/bg-login",
     "pages/loding/registered/registered",
     "pages/loding/AccountLogin/AccountLogin",
-    "pages/loding/wangji/wangji"
+    "pages/loding/wangji/wangji",
+    "pages/index/index",
+    "pages/index/OrderDetails/OrderDetails",
+    "pages/index/myinfo",
+    "pages/wallet/wallet",
+    "components/bg-login/bg-login",
+    "pages/dingdan/dingdan",
+    "pages/wallet/walletdetail/walletdetail"
   ],
   "subPackages": [],
   "window": {

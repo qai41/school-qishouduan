@@ -26,16 +26,15 @@ Vue.prototype.$mUtils = $mUtils
 */
 $mRouterConfig.beforeEach((navType,to) => {
 	if(to.router == undefined ) return ('请配置跳转页面的名字',JSON.stringify(to));
+	
 	if(to.router.requiresAuth){//需要权限的页面
 		if(store.getters.hasLogin){ //登陆状态:已登录
 			uni[navType]({
 				url: $mUtils.objParseUrlAndParam(to.router.path, to.query)
 			})
 		}else{//登陆状态: 没登陆
-			$mUtils.msg({title:'登陆后才能访问'},function(){
-				uni.navigateTo({url:'/pages/loding/loding'})
-			})
-			
+			$mUtils.msg({title:'登陆后才能访问'})
+			uni.navigateTo({url:'/pages/loding/loding'})
 		}		
 	}else{//没权限的页面
 		uni[navType]({
@@ -46,6 +45,13 @@ $mRouterConfig.beforeEach((navType,to) => {
 })
 
 
+// $api.refreshToken().then(res => {
+// 	if(res.status == 'success' && res.status_code == 200){
+// 		store.commit('set_token',res.data.access_token)
+// 	}
+// });
+// 
+// console.log('这个页面是每次都访问')
 
 
 App.mpType = 'app'

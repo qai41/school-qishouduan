@@ -1,0 +1,40 @@
+page {
+  background-color: #F2F3F3;
+}
+text {
+  font-size: 26rpx;
+  color: #333333;
+  line-height: 36rpx;
+  margin-top: 30rpx;
+}
+.walletdetail {
+  width: 100%;
+  overflow: hidden;
+}
+.walletdetail .reflect,
+  .walletdetail .income {
+    width: 100%;
+    margin-top: 20rpx;
+    background-color: #FFFFFF;
+    padding-left: 30rpx;
+}
+.walletdetail .reflect .yue .hao,
+    .walletdetail .income .yue .hao {
+      font-size: 32rpx;
+}
+.walletdetail .reflect .yue .year,
+    .walletdetail .income .yue .year {
+      color: #777777;
+}
+.walletdetail .reflect .icon,
+    .walletdetail .income .icon {
+      width: 20rpx;
+      height: 20rpx;
+      background-color: #1A7AFC;
+      -webkit-border-radius: 50%;
+              border-radius: 50%;
+      margin-top: 30rpx;
+      margin-left: 50rpx;
+      margin-right: 50rpx;
+}
+

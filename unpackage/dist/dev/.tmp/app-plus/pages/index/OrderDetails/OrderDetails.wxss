@@ -23,7 +23,7 @@
 }
 .page .orderderails .few.data-v-02dd1234 {
       color: #333333;
-      font-weight: Bold;
+      font-weight: 400;
 }
 .page .orderderails .few text.data-v-02dd1234 {
         font-size: 26rpx;
@@ -77,14 +77,14 @@
         font-size: 28rpx;
         color: #333333;
         line-height: 36rpx;
-        font-weight: 800;
+        font-weight: 500;
 }
 .page .orderderails .adderss .ad_right .ac.data-v-02dd1234 {
         margin-top: 12rpx;
         margin-bottom: 30rpx;
         font-size: 24rpx;
         color: #777777;
-        font-weight: 500;
+        font-weight: 400;
 }
 .page .orderderails .article.data-v-02dd1234 {
       background-color: #F5F5F5;
@@ -130,7 +130,7 @@
       height: 100%;
       text-align: center;
       color: #333333;
-      font-weight: bold;
+      font-weight: 500;
       line-height: 88rpx;
 }
 

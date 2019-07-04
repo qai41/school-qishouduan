@@ -105,7 +105,7 @@
 			overflow: hidden;
 			.few{
 				color: #333333;
-				font-weight: Bold;
+				font-weight: 400;
 				text{
 					font-size: 26upx;
 					line-height: 36upx;
@@ -161,14 +161,14 @@
 						font-size: 28upx;
 						color: #333333;
 						line-height: 36upx;
-						font-weight: 800;
+						font-weight: 500;
 					}
 					.ac{
 						margin-top: 12upx;
 						margin-bottom: 30upx;
 						font-size: 24upx;
 						color: #777777;
-						font-weight: 500;
+						font-weight: 400;
 					}
 				}
 			}
@@ -216,7 +216,7 @@
 				height: 100%;
 				text-align: center;
 				color: #333333;
-				font-weight: bold;
+				font-weight: 500;
 				line-height: 88upx;
 			}
 		}

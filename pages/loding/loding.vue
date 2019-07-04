@@ -46,15 +46,17 @@
 					// 验证通过,发送请求
 					uni.showLoading({title: '登陆中'});
 					await this.$api.phoneLong(data).then(res=>{
+						return res
 						if(res.status == 'success'&&res.status_code == 200){
 							uni.hideLoading()
 							this.$store.commit('set_token',res.data.token.access_token); //保存token至本地
 							this.$store.commit('set_info',res.data.courier) //保存用户信息至本地
 							this.$mUtils.msg({title:'登陆成功'})
-							this.$mRouterConfig.redirectTo({router:this.$mRouter.home})
+							this.$mRouterConfig.reLaunch({router:this.$mRouter.home})
+							// 长连接
 						}
-						console.log(JSON.stringify(res.data)) //登陆成功返回courier跟token 待处理
 					})
+					
 			},
 			jump(path){//跳转事件
 				this.$mRouterConfig.push({router: this.$mRouter[`${path}`]});

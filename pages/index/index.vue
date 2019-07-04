@@ -1,6 +1,7 @@
 <template>
 	<!-- 局部选项卡 -->
 	<view class="grace-tab">
+		<myinfo class="left-cart" v-if="showcar"></myinfo>
 		<scroll-view class="grace-tab-title grace-space-between" :scroll-x="true" :scroll-into-view="titleShowId">
 			<view 
 			v-for="(tab, index) in tabs" :class="[tabCurrentIndex == index ? 'grace-tab-current' : '']" 
@@ -16,39 +17,6 @@
 							<view class="grace-space-between dan-a grace-flex-vcenter">
 								<view class="g_floor">
 									#2
-								</view>
-								<view class="f25">尽快送达</view>
-								<view class="price f40 cred">￥3.5</view>
-							</view>
-							<view class="dan-b grace-relative">
-								<view class="cell grace-space-between grace-flex-vcenter">
-									<view class="vtags f22 c77">
-										取货
-									</view>
-									<view class="desc flex_box_1">
-										<view class="f28">潮佳兴（肠粉王）</view>
-										<view class="f24 c77">彩田路3067号财富大厦惠福阁门口</view>
-									</view>
-								</view>
-								<view class="cell grace-space-between grace-flex-vcenter">
-									<view class="vtags f22 c77">
-										送货
-									</view>
-									<view class="desc flex_box_1">
-										<view class="f28">黄河科技信息大楼</view>
-									</view>
-								</view>
-							</view>
-							<view class="grace-nowrap dan-c">
-								<view class="cell">联系商家</view>
-								<view class="cell">联系顾客</view>
-								<view class="cblue cell">确认送达</view>
-							</view>
-						</view>
-						<view class="items" @click="gopage">
-							<view class="grace-space-between dan-a grace-flex-vcenter">
-								<view class="g_floor">
-									#1
 								</view>
 								<view class="f25">尽快送达</view>
 								<view class="price f40 cred">￥3.5</view>
@@ -118,109 +86,8 @@
 								<view class="cblue cell">确认送达</view>
 							</view>
 						</view>
-						<view class="items">
-							<view class="grace-space-between dan-a grace-flex-vcenter">
-								<view class="g_floor">
-									#1
-								</view>
-								<view class="f25">尽快送达</view>
-								<view class="price f40 cred">￥3.5</view>
-							</view>
-							<view class="dan-b grace-relative">
-								<view class="cell grace-space-between grace-flex-vcenter">
-									<view class="vtags f22 c77">
-										取货
-									</view>
-									<view class="desc flex_box_1">
-										<view class="f28">潮佳兴（肠粉王）</view>
-										<view class="f24 c77">彩田路3067号财富大厦惠福阁门口</view>
-									</view>
-								</view>
-								<view class="cell grace-space-between grace-flex-vcenter">
-									<view class="vtags f22 c77">
-										送货
-									</view>
-									<view class="desc flex_box_1">
-										<view class="f28">黄河科技信息大楼</view>
-									</view>
-								</view>
-							</view>
-							<view class="grace-nowrap dan-c">
-								<view class="cell">联系商家</view>
-								<view class="cell">联系顾客</view>
-								<view class="cblue cell">确认送达</view>
-							</view>
-						</view>
 					</view>
-					<view class="dan-list">
-						<view class="dan-date f32">2019/05/23</view>
-						<view class="items">
-							<view class="grace-space-between dan-a grace-flex-vcenter">
-								<view class="g_floor">
-									#2
-								</view>
-								<view class="f25">尽快送达</view>
-								<view class="price f40 cred">￥3.5</view>
-							</view>
-							<view class="dan-b grace-relative">
-								<view class="cell grace-space-between grace-flex-vcenter">
-									<view class="vtags f22 c77">
-										取货
-									</view>
-									<view class="desc flex_box_1">
-										<view class="f28">潮佳兴（肠粉王）</view>
-										<view class="f24 c77">彩田路3067号财富大厦惠福阁门口</view>
-									</view>
-								</view>
-								<view class="cell grace-space-between grace-flex-vcenter">
-									<view class="vtags f22 c77">
-										送货
-									</view>
-									<view class="desc flex_box_1">
-										<view class="f28">黄河科技信息大楼</view>
-									</view>
-								</view>
-							</view>
-							<view class="grace-nowrap dan-c">
-								<view class="cell">联系商家</view>
-								<view class="cell">联系顾客</view>
-								<view class="cblue cell">确认送达</view>
-							</view>
-						</view>
-						<view class="items">
-							<view class="grace-space-between dan-a grace-flex-vcenter">
-								<view class="g_floor">
-									#1
-								</view>
-								<view class="f25">尽快送达</view>
-								<view class="price f40 cred">￥3.5</view>
-							</view>
-							<view class="dan-b grace-relative">
-								<view class="cell grace-space-between grace-flex-vcenter">
-									<view class="vtags f22 c77">
-										取货
-									</view>
-									<view class="desc flex_box_1">
-										<view class="f28">潮佳兴（肠粉王）</view>
-										<view class="f24 c77">彩田路3067号财富大厦惠福阁门口</view>
-									</view>
-								</view>
-								<view class="cell grace-space-between grace-flex-vcenter">
-									<view class="vtags f22 c77">
-										送货
-									</view>
-									<view class="desc flex_box_1">
-										<view class="f28">黄河科技信息大楼</view>
-									</view>
-								</view>
-							</view>
-							<view class="grace-nowrap dan-c">
-								<view class="cell">联系商家</view>
-								<view class="cell">联系顾客</view>
-								<view class="cblue cell">确认送达</view>
-							</view>
-						</view>
-					</view>
+					
 				</scroll-view>
 			</swiper-item>
 		</swiper>
@@ -229,7 +96,8 @@
 	
 </template>
 <script>
-export default {
+	import myinfo from './myinfo.vue'
+	export default {
 	data() {
 		return {
 			tabCurrentIndex: 0,
@@ -242,13 +110,17 @@ export default {
 			titleShowId : 'tabTag-0',
 			pending:[
 				
-			]
+			],
+			showcar:false
 		}
+	},
+	components:{
+		myinfo
 	},
 	methods:{
 		tabChange: function (e) {
+			console.log(e)
 			var index = e.target.id.replace('tabTag-', '');
-			console.log(index)
 			this.swiperCurrentIndex = index;
 			this.tabCurrentIndex    = index;
 			this.titleShowId        = 'tabTag-'+index;
@@ -259,15 +131,25 @@ export default {
 			this.titleShowId        = 'tabTag-'+index;
 		},
 		gopage(){// 跳往详情
-			uni.navigateTo({
-				url: './OrderDetails/OrderDetails'
-			})
+			this.$mRouterConfig.push({route: this.$mRouter.OrderDetails})
 		}
+	},
+	onNavigationBarButtonTap(e) { //导航栏的点击事件
+	   this.showcar = !this.showcar
+	},
+	async onLoad() {  //获取订单详情待处理
+		await this.$api.refreshToken().then(res => {
+			this.$store.commit('set_token',res.data.access_token)
+		})
+		this.$api.courier_order().then(res => { 
+			// console.log('获取订单详情',JSON.stringify(res))
+		})
 	}
 }
 </script>
 <style>
-page{background: #f2f2f2;color: #333;}
+page{background: #f2f2f2;color: #333; position: relative;}
+/* .left-cart{position: absolute;left: 0; top: -200upx;z-index: 999;} */
 .f22{font-size: 22upx;}
 .f24{font-size: 24upx;}
 .f25{font-size:26upx;}

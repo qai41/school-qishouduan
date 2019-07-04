@@ -537,20 +537,32 @@ to {-webkit-transform:rotateY(360deg);transform:rotateY(360deg);}}
 .grace-editor .content .center{background:none; width:200rpx; text-align:center; border:none; font-size:28rpx; line-height:60rpx; padding:5px 18px; border-bottom:2px solid #C1C1C1; font-size:30rpx; font-weight:600;}
 .grace-editor .content .center-title{text-align:center; border:none; font-size:28rpx; line-height:60rpx; padding:10px 0; border-bottom:2px solid #F4F5F6; font-size:30rpx; font-weight:600; display:inline-block;}
 .grace-editor .content .link{background:none; line-height:32rpx; padding:5px 0; color:#007AFF;}
-@font-face {font-family: "eosfont";
-		src:  url('//at.alicdn.com/t/font_1260216_is7vpu94ogr.ttf') format('truetype'),
+@font-face {
+  font-family: 'eosfont';  /* project id 1260216 */
+  src: url('https://at.alicdn.com/t/font_1260216_3erliulnvdn.eot');
+  src: url('https://at.alicdn.com/t/font_1260216_3erliulnvdn.eot?#iefix') format('embedded-opentype'),
+  url('https://at.alicdn.com/t/font_1260216_3erliulnvdn.woff2') format('woff2'),
+  url('https://at.alicdn.com/t/font_1260216_3erliulnvdn.woff') format('woff'),
+  url('https://at.alicdn.com/t/font_1260216_3erliulnvdn.ttf') format('truetype'),
+  url('https://at.alicdn.com/t/font_1260216_3erliulnvdn.svg#eosfont') format('svg');
 }
-.eosfont{
-  font-family: "iconfont" !important;
+.eosfont {
+  font-family: "eosfont" !important;
   font-size: 16px;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.icon-iconfontscanning:before {
-  content: "\E65E";
+.icon-qianbao:before {
+  content: "\E630";
 }
-.icon-RectangleCopy:before {
-  content: "\E6A2";
+.icon-caidan:before {
+  content: "\E601";
+}
+.icon-qianjin:before {
+  content: "\E615";
+}
+.icon-shezhi:before {
+  content: "\E600";
 }
 
