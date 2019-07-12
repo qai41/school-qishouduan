@@ -1,11 +1,10 @@
-@font-face {
-  font-family: 'eosfont';  /* project id 1260216 */
-  src: url('https://at.alicdn.com/t/font_1260216_3erliulnvdn.eot');
-  src: url('https://at.alicdn.com/t/font_1260216_3erliulnvdn.eot?#iefix') format('embedded-opentype'),
-  url('https://at.alicdn.com/t/font_1260216_3erliulnvdn.woff2') format('woff2'),
-  url('https://at.alicdn.com/t/font_1260216_3erliulnvdn.woff') format('woff'),
-  url('https://at.alicdn.com/t/font_1260216_3erliulnvdn.ttf') format('truetype'),
-  url('https://at.alicdn.com/t/font_1260216_3erliulnvdn.svg#eosfont') format('svg');
+@font-face {font-family: "eosfont";
+  src: url('https://iconfont.eot?t=1562578231532'); /* IE9 */
+  src: url('https://iconfont.eot?t=1562578231532#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('https://data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAS0AAsAAAAAClgAAARoAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDQAqHYIY+ATYCJAMYCw4ABCAFhGEHVxvfCMgehXF78gQnTpyWSC0e/v8Qve//n7WWhwZOioYSWgNoU3q8YAUqUKk4eUyrlfLzbtr7MVKoCz2bam4RSImRS6g42Wyt+qmtbpHtxGaf2wABEWv//lA173LZlAvwx7iPPWzMTblYRAO0t49SvecLJFjEAnst1haD8aZSXb3O6wRqDYqDNirq2kCqEPMCccSoZCCt1MoCNVTLKomtBeIViFUnq+AlgGf/8/EXUpKCpCKDuGn3sFwJRT/gZ5KQP+L1ZR74/RnR7yJjHijEFWk+IYzCeS+upX5DZA2oVS1JP9DPoJ/xP5OOjvgBmX9F5lr18l8eFbIiCaIShLie4zZ9FfwAzc4SBKUMSRCUCiTxUEqQJIH7lOSVe5zSB2IdIG5ByOf3/7l6lZJU4+EX5kGA4iN6J0+vbE/Txjv7B/N729t2+zn+rO28+YICuVwd3g5Hm8jpbPdxuzvbvG+/jxZvfcj0ufUuCnCS2b6OgNdve/HHrmN77kqi17ZoXiII+wI/75f+OM5u0i2GdHYsLgW1L/CBbfO2QQJqabTvA42GX9KLtrN8ELVgv2AOxocIVM7z5+whqiXz1NaDTFfJTdd7V8zrmvWXttfRjroNx1tHxt22W/f4u2nO4jvOd87IV+1bb+yvotyNm+4P7vQHnbfvD131RY+csduOhTl8pcPaYelYVmI+qdFySEDvPVQ5OFiJLimG60eVfDXmnOrStXMET5y75lPmfjcjrRY1S4ZlmKG/54hzeaf+NFdUBAXp4c1/IO3YircVQ1IrNxZg55JQMFCu9BrbhBRx7iytV7rCQqX1StAQLH1WeKpVW64ta5uWj9Ul48kmxBeDm/ejQrqh6R6u1Y/Wb0wBx/zMjCXUL3TcuSaWQy3REBuyjLuOh0LmeOxivG8RllBFWIiqr/yv98+bnt8v8uW/ElWWKiIB8y2Kv9h0MY7JpPPGIt/7HeY9wTCkOO7i6Zak8nKhUEuT/GUwDfCyWARCNQD5K3KyUU+C1wAvP9JHYSRT3M1SWvSnfY1/IdyVQZ+8/1JCBPClOiGT8/fjq5ZYm/MXFZeaaXsEoakslJgv1XkClR6/f3dCrezir2lv9XFf8o7v2x+qdGRIuH7IuDEouFlUoc4KqlRlFdWaU2qp0/aHzysewCwzUGj0BhLuLWTcOyi4D6hCp2+oUqP/qNZeYEfWmawfLzVSMo5SkvIJklGwelp5OJxiTT6+hVKNaGXGiutmdVBGE8PqyeSEpFGgktJTxu3XmEZVKRxHk7SR1ZEVm9yk1bKkwciqKQWXMMxxhpzERJp6owQFqwPcOiOKDIeiRJKbQGIosPRoW8zBHWCZamiJVhmhJdu2jK5QCTsaMGKZwUjJEiQtQ6VYv07FcxhtMkolBYdDN0K6SWbpkCqOJNRKL4tkoCepURQ4CYa3cBvkSOSd6HXFCVcn1b2+QqhBnFwZAiREIiRGEoRB1Tkj08tlLKb2Ezh2RKKQMUqZfmqsmtFLTMPU5DADAA==') format('woff2'),
+  url('https://iconfont.woff?t=1562578231532') format('woff'),
+  url('https://iconfont.ttf?t=1562578231532') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('https://iconfont.svg?t=1562578231532#eosfont') format('svg'); /* iOS 4.1- */
 }
 
 .eosfont {
@@ -18,6 +17,10 @@
 
 .icon-qianbao:before {
   content: "\e630";
+}
+
+.icon-jiantou:before {
+  content: "\e62d";
 }
 
 .icon-caidan:before {

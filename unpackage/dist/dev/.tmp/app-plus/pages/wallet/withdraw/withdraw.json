@@ -1,0 +1,17 @@
+{
+  "usingComponents": true,
+  "navigationBarTitleText": "余额提现",
+  "subNVues": [
+    {
+      "id": "asdasd",
+      "path": "pages/wallet/withdraw/subNVue/popup",
+      "style": {
+        "position": "absolute",
+        "dock": "right",
+        "width": "100upx",
+        "height": "150upx",
+        "background": "transparent"
+      }
+    }
+  ]
+}

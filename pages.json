@@ -53,16 +53,7 @@
 				"navigationBarTitleText":"订单详情"
 			}
         },
-		{
-			"path" : "pages/index/myinfo",
-			"style" : {
-				"navigationStyle":	"custom",
-				"app-plus": {  
-					"titleNView": false 
-				} 
-				// 个人中心
-			}
-		},
+		
 		{
 			"path" : "pages/wallet/wallet",
 			"style" : {
@@ -96,10 +87,61 @@
         ,{
             "path" : "pages/wallet/walletdetail/walletdetail",
             "style" : {
-				 "navigationBarTitleText": "钱包明细"
+				 "navigationBarTitleText": "余额明细"
+			}
+        }
+       
+        ,{
+            "path" : "pages/wallet/ordertoday/ordertoday",
+            "style" : {
+				"navigationBarTitleText": "今日订单"
+			}
+        }
+        ,{
+            "path" : "pages/wallet/withdraw/withdraw",
+            "style" : {
+				"navigationBarTitleText": "余额提现",
+				"app-plus": {  
+					"usingComponents":true,
+					"subNVues":[{  
+						"id": "asdasd", // 唯一标识  
+						"path": "pages/wallet/withdraw/subNVue/popup", // 页面路径  
+						/*"type": "popup",  这里不需要*/  
+						"style": {  
+							"position": "absolute",  
+							"dock": "right",  
+							"width": "100upx",  
+							"height": "150upx",  
+							"background": "transparent"  
+						}  
+					}]  
+				}  
+			}
+        }
+        ,{
+            "path" : "pages/wallet/bindcar/bindcar",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/myinfo/myinfo",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/myinfo/myinfo",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/myinfo/customer/customer",
+            "style" : {
+				"navigationBarTitleText": "客服中心"
 			}
         }
     ],
+	"tabBar": {
+        "list": [{
+            "pagePath": "pages/index/index"
+        }]
+    },
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "首页",

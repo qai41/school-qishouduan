@@ -21,6 +21,20 @@ const store = new Vuex.Store({
 			}else{
 				return false
 			}
+		},
+		getchang(state){
+			const token = state.token
+			const url  = 'ws://47.106.104.248:5555?token='+token+'&type=courier';
+			console.log(token);
+			uni.connectSocket({
+				url: url,
+			});
+			uni.onSocketOpen(function(res) {
+				console.log('WebSocket连接已打开！!');
+			});
+			uni.onSocketMessage(function(res) {
+				console.log('收到服务器内容：' + res.data);
+			})
 		}
 	},
 	mutations:{
@@ -30,7 +44,10 @@ const store = new Vuex.Store({
 		},
 		set_logout(state,token){//登出
 			state.token = '';
-			uni.setStorageSync('token',"")
+			uni.setStorageSync('token',"");
+			uni.navigateTo({
+				url: '/pages/loding/loding'
+			})
 		},
 		set_info(state,info){
 			state.user_info = info;

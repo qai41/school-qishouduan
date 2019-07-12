@@ -1,0 +1,2 @@
+<import src="./bg-login.vue.wxml" />
+    <template is="d571f280" data="{{ ...$root['0'], $root }}"/>

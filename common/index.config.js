@@ -4,7 +4,7 @@ const CONFIG = {
 	// 生产环境
 	production:{
 		loginPath: '',
-		apiPath: 'http://xchl.utobang.com',
+		apiPath: 'https://xchl.utobang.com',
 		img:'/static'
 	}
 }

@@ -1,0 +1,7 @@
+<import src="/components/bg-login/bg-login.vue.wxml" />
+<import src="/components/input-code/input-code.vue.wxml" />
+<import src="/components/input-phone/input-phone.vue.wxml" />
+<import src="/pages/index/myinfo.vue.wxml" />
+<import src="/components/input-password/input-password.vue.wxml" />
+<import src="/pages/wallet/withdraw/select.vue.wxml" />
+

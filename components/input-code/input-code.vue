@@ -23,7 +23,7 @@
 			remove(){
 				this.phone = ''
 			},
-			async obtain(){
+			obtain(){
 				let params = {phone:this.phone}; 						 //要验证的数据
 				let isSend = GraceChack.check(params,Inputfule.codePhone)//验证是否通过
 				if(isSend){
@@ -41,7 +41,7 @@
 							}
 							this.oneM = `${countdown}s`
 						},1000)
-						await this.$api.code({phone:this.phone}).then(res=>{
+						this.$api.code({phone:this.phone}).then(res=>{
 							uni.showToast({
 								title: '短信发送成功',
 								icon: 'none'

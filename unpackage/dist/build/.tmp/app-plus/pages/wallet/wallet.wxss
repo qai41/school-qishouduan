@@ -1,0 +1,44 @@
+page.data-v-3e6cef01 {
+  background: #F2F3F3;
+}
+.wallet-main.data-v-3e6cef01 {
+  width: 100%;
+  overflow: hidden;
+}
+.wallet-main .waller-top.data-v-3e6cef01 {
+    height: 260rpx;
+    background-color: #1A7AFC;
+    font-size: 70rpx;
+    color: #fff;
+}
+.wallet-main .waller-top button.data-v-3e6cef01 {
+      width: 280rpx;
+      height: 80rpx;
+      font-size: 32rpx;
+      color: #1A7AFC;
+      line-height: 80rpx;
+}
+.wallet-main .waller-content.data-v-3e6cef01 {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 20rpx;
+    background-color: #fff;
+}
+.wallet-main .waller-content .title.data-v-3e6cef01 {
+      border-bottom: 2rpx solid #E6E6E6;
+      height: 90rpx;
+      padding: 0 30rpx;
+}
+.wallet-main .waller-content .title .money.data-v-3e6cef01 {
+        font-size: 26rpx;
+        color: #DE3535;
+}
+.wallet-main .waller-content .title .money view.data-v-3e6cef01 {
+          color: #9A9A9A;
+          margin-left: 30rpx;
+          line-height: 44rpx;
+}
+.wallet-main .waller-content .title.active.data-v-3e6cef01 {
+      font-size: 26rpx;
+}
+

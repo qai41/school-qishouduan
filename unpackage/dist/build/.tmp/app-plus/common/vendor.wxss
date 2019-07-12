@@ -1,0 +1,100 @@
+.page.data-v-228b89f7 {
+  position: relative;
+  width: 100%;
+  height: 440rpx;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#1A7AFC), to(#5DA1FD));
+  background-image: -webkit-linear-gradient(bottom, #1A7AFC 0%, #5DA1FD 100%);
+  background-image: -o-linear-gradient(bottom, #1A7AFC 0%, #5DA1FD 100%);
+  background-image: linear-gradient(0deg, #1A7AFC 0%, #5DA1FD 100%);
+}
+.page image.data-v-228b89f7 {
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+}
+.page .user.data-v-228b89f7 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-60px, -30rpx);
+        -ms-transform: translate(-60px, -30rpx);
+            transform: translate(-60px, -30rpx);
+    width: 226rpx;
+    height: 350rpx;
+    text-align: center;
+    font-size: 38rpx;
+    color: #fff;
+    font-weight: 500;
+    line-height: 36rpx;
+}
+.page .user .user_img.data-v-228b89f7 {
+      width: 140rpx;
+      height: 140rpx;
+      margin: 0 auto;
+      background-color: aliceblue;
+}
+.page .user text.data-v-228b89f7 {
+      margin-top: 40rpx;
+}
+
+.page-code.data-v-8e9b92f2 {
+  border-bottom: 2rpx solid #ccc;
+  height: 100rpx;
+}
+.page-code .code.data-v-8e9b92f2 {
+    width: 444rpx;
+    font-size: 30rpx;
+    padding: 20rpx 0;
+}
+.page-code image.data-v-8e9b92f2 {
+    display: none;
+    width: 20rpx;
+    height: 20rpx;
+}
+.page-code image.active.data-v-8e9b92f2 {
+    display: block;
+}
+.page-code .hadcode.data-v-8e9b92f2 {
+    width: 276rpx;
+    line-height: 100rpx;
+    text-align: center;
+    color: #1A7AFC;
+}
+.page-code .hadcode.active.data-v-8e9b92f2 {
+    color: #777777;
+}
+
+.phone-input.data-v-c0b75000 {
+  border-bottom: 2rpx solid #ccc;
+}
+.phone-input input.data-v-c0b75000 {
+    width: 650rpx;
+    font-size: 30rpx;
+    padding: 20rpx 0;
+}
+.phone-input image.data-v-c0b75000 {
+    display: none;
+    width: 20rpx;
+    height: 20rpx;
+}
+.phone-input image.active.data-v-c0b75000 {
+    display: block;
+}
+
+.phone-input.data-v-b476c6a8 {
+  border-bottom: 2rpx solid #ccc;
+}
+.phone-input input.data-v-b476c6a8 {
+    width: 650rpx;
+    font-size: 30rpx;
+    padding: 20rpx 0;
+}
+.phone-input image.data-v-b476c6a8 {
+    display: none;
+    width: 20rpx;
+    height: 20rpx;
+}
+.phone-input image.active.data-v-b476c6a8 {
+    display: block;
+}
+

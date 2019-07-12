@@ -9,9 +9,9 @@
 		<view class="orderderails grace-columns">
 			<!-- 编号 -->
 			<view class="few  grace-space-between ">
-				<text>#1</text>
+				<text>#{{detail.id}}</text>
 				<text>尽快送达</text>
-				<text>￥3.5</text>
+				<text>{{detail.total/100}}</text>
 			</view>
 			<!-- 地址 -->
 			<view class="adderss grace-columns">
@@ -21,49 +21,42 @@
 						<view>送货</view>
 					</view>
 					<view class="ad_right">
-						<view>潮佳兴（肠粉王）</view>
-						<view class="ac">彩田路3067号财富大厦惠福阁门口</view>
-						<view>黄河科技信息大楼</view>
+						<view>{{detail.store.name}}</view>
+						<view class="ac">{{detail.store.address}}</view>
+						<view>{{detail.customer_address.school_building.name}}</view>
 					</view>
 				</view>
 			</view>
 			<!-- 物品 -->
 			<view class="article grace-columns">
-				<view class="items grace-space-between">
+				<view class="items grace-space-between" v-for="tit of detail.products" :key="tit.id">
 					<text class="article_name">
-						正宗老北京烤鸭卷饼 套餐超长标题正宗老北京烤鸭卷饼 套餐超长标题......
+						{{tit.name}}
 					</text>
-					<text class="article_count">*1</text>
-					<text class="article_pir">￥125</text>
-				</view>
-				<view class="items grace-space-between">
-					<text class="article_name">
-						正宗老北京烤鸭卷饼
-					</text>
-					<text class="article_count">*1</text>
-					<text class="article_pir">￥125</text>
-				</view>
+					<text class="article_count">*{{tit.quantity}}</text>
+					<text class="article_pir">￥{{tit.price/100}}</text>
+				</view>				
 			</view>
 			<!-- 备注 -->
 			<view class="rm remarks grace-space-between">
 				<text class="marks_b">备注</text>
-				<text class="marks_s">少辣</text>
+				<text class="marks_s">{{detail.comment}}</text>
 			</view>
 			<!-- 订单号 -->
 			<view class="rm order_num grace-space-between">
 				<text>订单号</text>
-				<text>20170719003</text>
+				<text>{{detail.order_number}}</text>
 			</view>
 			<!-- 下单时间 -->
 			<view class="rm dow_time grace-space-between">
 				<text>下单时间</text>
-				<view class="grace-rows">2019-04-03<view></view>09:47</view>
+				<view>{{detail.created_at}}</view>
 			</view>
 		</view>
-		<view class="option grace-rows">
-			<view>联系商家</view>
-			<view>联系顾客</view>
-			<view>确定送达</view>
+		<view class="option grace-rows" v-show="detail.status == 6? true:false">
+			<view>{{detail.customer_address.phone}}</view>
+			<view>{{detail.store.phone}}</view>
+			<view style="color: #1A7AFC;" @click="songda(detail.id)">确定送达</view>
 		</view>
 	</view>
 </template>
@@ -72,11 +65,31 @@
 	export default {
 		data() {
 			return {
-				
+				detail1:null
 			}
 		},
 		methods: {
-			
+			songda(id){ //确定送达
+				console.log(id)
+				this.$api.determine(id).then(res=>{
+					if(res.status == 'success' && res.status_code == 200){
+						this.$mUtils.msg({title:res.data.message})
+						setTimeout(()=>{
+							uni.navigateBack({
+								delta: 1
+							});
+						},1500)
+					}
+				})
+			}
+		},
+		computed:{
+			detail:function(){
+				return JSON.parse(this.detail1)
+			}
+		},
+		onLoad:function(option){
+			this.detail1 = option.titl1;
 		}
 	}
 </script>

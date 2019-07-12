@@ -35,7 +35,7 @@
 		},
 		methods: {
 			
-			async login(){//登录
+			login(){//登录
 					//验证
 					let data = {phone:this.$refs.phone.phone,code:this.$refs.code.code}
 					let checkRes = GraceChack.check(data, Inputfule.codeL);
@@ -45,15 +45,15 @@
 					}
 					// 验证通过,发送请求
 					uni.showLoading({title: '登陆中'});
-					await this.$api.phoneLong(data).then(res=>{
-						return res
+					this.$api.phoneLong(data).then(res=>{
+						// return res
 						if(res.status == 'success'&&res.status_code == 200){
+							console.log(JSON.stringify(res))
 							uni.hideLoading()
 							this.$store.commit('set_token',res.data.token.access_token); //保存token至本地
 							this.$store.commit('set_info',res.data.courier) //保存用户信息至本地
 							this.$mUtils.msg({title:'登陆成功'})
-							this.$mRouterConfig.reLaunch({router:this.$mRouter.home})
-							// 长连接
+							this.$mRouterConfig.switchTab({router:this.$mRouter.home})
 						}
 					})
 					
@@ -61,6 +61,9 @@
 			jump(path){//跳转事件
 				this.$mRouterConfig.push({router: this.$mRouter[`${path}`]});
 			}
+		},
+		onLoad() {
+
 		}
 	}
 </script>
@@ -87,9 +90,12 @@
 					&:after{
 						display: inline-block;
 						content: '';
-						width: 12upx;
-						height: 20upx;
-						background-color: #1A7AFC;
+						width: 28upx;
+						height: 22upx;
+						background-image: url('~@/static/LoginImg/back.png');
+						background-repeat: no-repeat;
+						background-position: center;
+						background-size: 28upx 22upx;
 						margin-left: 20upx;
 					}
 				}

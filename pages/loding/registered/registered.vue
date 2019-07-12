@@ -35,7 +35,7 @@
 				<text grace-rows>点击“立即注册”按钮即同意<text>《校餐宝隐私政策》</text>及<text>《校餐 宝用户服务协议》</text></text>
 			</view>
 			<!-- 注册 -->
-			<button class="btn-reg active" @click="login">登陆</button>
+			<button class="btn-reg active" @click="login">注册</button>
 		</view>
 	</view>
 </template>
@@ -89,8 +89,11 @@
 			login(){ //发送注册信息
 				let arr = [{name:'photo1',uri:this.photo1},{name:'photo2',uri:this.photo2}]
 				uni.uploadFile({
-					url: 'http://xchl.utobang.com/api/courier',
+					url: 'https://xchl.utobang.com/api/courier',
 					files:arr,
+					header:{
+						"content-type" : "multipart/form-data"
+					},
 					formData: {
 						name: this.name,
 						phone: this.$refs.codePhone.phone,
@@ -100,12 +103,12 @@
 						school_id: 1
 					},
 					success: (uploadFileRes) => {
+						console.log(JSON.stringify(uploadFileRes))
 						if(uploadFileRes.status_code == '200' ){
-							this.$mUtils.msg({title:'注册成功'},function(){
-								uni.redirectTo({
-									url:'/pages/index/index'
-								})
-							})
+							this.$mUtils.msg({title:'注册成功'})
+							this.$store.commit('set_token',res.data.token.access_token); //保存token至本地
+							this.$store.commit('set_info',res.data.courier) //保存用户信息至本地
+							this.$mRouterConfig.switchTab({router:this.$mRouter.home})
 						} 
 					}
 				});

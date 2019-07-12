@@ -1,0 +1,13 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "首页",
+  "titleNView": {
+    "buttons": [
+      {
+        "float": "left",
+        "text": "",
+        "fontSrc": "/static/iconfont.ttf"
+      }
+    ]
+  }
+}

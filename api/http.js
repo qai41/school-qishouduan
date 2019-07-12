@@ -1,8 +1,8 @@
 
-async function HTTP(obj,config){
+function HTTP(obj,config){
 	
 	return new Promise((resolve,reject) => {
-		
+		let token = uni.getStorageSync('token') || ''
 		let options = {
 			url: '',
 			method: 'GET',
@@ -10,10 +10,10 @@ async function HTTP(obj,config){
 			data:{},
 			header:{
 				"content-type": "application/x-www-form-urlencoded",
-				"Authorization": 'Bearer '+`${uni.getStorageSync('token')}`
+				"Authorization": 'Bearer '+`${token}`
 			},
 			success:(res) => {
-				// console.log('请求成功 结果: ',JSON.stringify(res))
+				// console.log('请求结果为',JSON.stringify(res))
 				// 状态码200表示成功
 				if(res.data.status_code == 200 && res.data.status == 'success'){
 					resolve(res.data);
@@ -27,7 +27,11 @@ async function HTTP(obj,config){
 					}
 					uni.showToast({title: failMsg,icon: 'none'})
 				}else{
+					uni.redirectTo({
+						url: '/pages/loding/loding'
+					})
 					reject("HTTP 状态码异常");
+					
 				}
 			},
 			fail:(err)  => {
@@ -37,12 +41,12 @@ async function HTTP(obj,config){
 					icon: 'none',
 					duration: 2000
 				})
-				reject('网络异常,请稍后尝试');
+				reject('网络异常,请稍后尝试');				
 			}
 		}
 		
 		options = {...options,...obj};
-		// console.log('options+++++',JSON.stringify(options))
+		console.log('options+++++',JSON.stringify(options))
 		
 		if(options.url && options.method){
 			uni.request(options)

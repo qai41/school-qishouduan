@@ -1,8 +1,8 @@
 <template>
 	<view class="page">
-		<image src="../../static/LoginImg/bg-img.png"></image>
-		<view class="user">
-			<view class="user_img"></view>
+		<image :src="logo"></image>
+		<view class="user grace-columns">
+			<image class="user_img" src="../../static/logo.png"></image>
 			<text>校餐宝骑手版</text>
 		</view>
 	</view>
@@ -12,7 +12,7 @@
 	export default {
 		data() {
 			return {
-				
+				logo: '/static/LoginImg/bg-img.png'
 			}
 		},
 		methods: {
@@ -38,9 +38,9 @@
 			position: absolute;
 			top: 50%;
 			left: 50%;
-			transform: translate(-75px ,-55upx);
+			transform: translate(-60px ,-30upx);
 			width: 226upx;
-			height: 210upx;
+			height: 350upx;
 			text-align: center;
 			font-size: 38upx;
 			color: #fff;
@@ -50,8 +50,10 @@
 				width: 140upx;
 				height: 140upx;
 				margin: 0 auto;
-				margin-bottom: 30upx;
 				background-color: aliceblue;
+			}
+			text{
+				margin-top: 40upx;
 			}
 		}
 	}

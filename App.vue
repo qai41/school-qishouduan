@@ -1,16 +1,17 @@
 <script>
 	export default {
 		onLaunch: function () {
-			// uni.removeStorageSync('token')
+			// uni.clearStorageSync();	
 			if(this.$store.getters.hasLogin){  //判断是否登陆
 				setTimeout(()=>{	
-					this.$mRouterConfig.redirectTo({router:this.$mRouter.home}) 
+					this.$mRouterConfig.switchTab({router:this.$mRouter.home}) 
 				},1000)
 			}else{//没登陆就定向到登陆页
 				setTimeout(()=> {
 					this.$mRouterConfig.redirectTo({router:this.$mRouter.codeL})
 				}, 1000);
 			}
+			// 全局刷新令牌
 		},
 		onShow: function () {
 			
@@ -30,5 +31,4 @@
 <style>
 	@import "./graceUI/graceIcons.css";
 	@import "./graceUI/graceUI.css";
-	@import "./static/iconfont.css";
 </style>

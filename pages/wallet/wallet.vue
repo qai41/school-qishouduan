@@ -2,20 +2,20 @@
 	<view class="wallet-main">
 		<view class="waller-top grace-columns grace-flex-center grace-flex-vcenter">
 			<text>¥{{money}}</text>
-			<button>提现</button>
+			<button @tap="jumppage('withdraw')">提现</button>
 		</view>
-		<view class="waller-content grace-columns <grace-flex-center></grace-flex-center>">
+		<!-- <view class="waller-content grace-columns <grace-flex-center></grace-flex-center>">
 			<view class="title grace-rows grace-flex-vcenter">
 				<text>今日预计收入</text>
 			</view>
-			<view class="title active grace-rows grace-flex-vcenter grace-space-between">
+			<view class="title active grace-rows grace-flex-vcenter grace-space-between" @tap="jumppage('ordertoday')">
 				<text>完成订单</text>
 				<text>共100单</text>
 				<view class="money grace-rows" @tap="walletdetail">
 					¥ 100 <view class="eosfont">&#xe615;</view>
 				</view>
 			</view>
-		</view>
+		</view> -->
 	</view>
 </template>
 
@@ -26,11 +26,24 @@
 				money: 29800
 			}
 		},
-		methods:{//跳转零钱明细
-			walletdetail(){
-				this.$mRouterConfig.push({router: this.$mRouter.walletdetail})
+		methods:{
+			//获取起手信息
+			getuserInfo(){
+				// this.$api.courierinfo().then(res => {
+				// 	if()
+				// })
+			},
+			//跳转
+			jumppage(target){
+				this.$mRouterConfig.push({router:this.$mRouter[`${target}`]})
 			}
-		}
+		},
+		created(){
+			this.getuserInfo()
+		},
+		onNavigationBarButtonTap(e) { //余额明细
+		   this.$mRouterConfig.push({router: this.$mRouter.walletdetail})
+		},
 	}
 </script>
 

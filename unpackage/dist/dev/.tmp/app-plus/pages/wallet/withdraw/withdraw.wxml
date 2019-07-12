@@ -1,0 +1,2 @@
+<import src="./withdraw.vue.wxml" />
+    <template is="2a0a986e" data="{{ ...$root['0'], $root }}"/>

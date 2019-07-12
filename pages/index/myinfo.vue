@@ -2,24 +2,20 @@
 	<view class="page grace-columns">
 		<view class="conten grace-columns">
 			<view class="user-head ">
-				<view class="grace-rows">
-					<image src="../../static/LoginImg/user-car.png"></image>
-					<!-- <text>编号：2016769</text> -->
-				</view>
 				<view class="grace-rows grace-space-between">
-					<text>{{iswork?'接单中':'休息中'}}</text>
-					<view :class="[iswork?'active':'','btn','grace-nowrap']" @tap="changework">
+					<text>{{userinfo.is_work?'接单中':'休息中'}}</text>
+					<view :class="[userinfo.is_work?'active':'','btn','grace-nowrap']" @tap="changework">
 						<view></view>
 					</view>
 				</view>
 			</view>
 			<view class="user-content">
-				<view class="title grace-wrap grace-flex-vcenter" @tap="jumppage">
-					<view class="eosfont">&#xe630;</view>
+				<view class="title grace-wrap grace-flex-vcenter" @tap="jumppage('wallet')">
+					<image src="../../static/whillt.png"></image>
 					<text>钱包</text>
 				</view>
-				<view class="title acrive grace-wrap grace-flex-vcenter">
-					<view class="eosfont">&#xe600;</view>
+				<view class="title acrive grace-wrap grace-flex-vcenter" @tap="jumppage('myinfo')">
+					<image src="../../static/setting.png"></image>
 					<text>设置</text>
 				</view>
 			</view>
@@ -27,7 +23,7 @@
 	</view>
 </template>	
 
-<script>
+<script scoped>
 	export default{
 		data(){
 			return{
@@ -36,50 +32,40 @@
 			}
 		},
 		methods:{
-			async changework(){ //修改工作状态
-				this.iswork = !this.iswork;
-				let data = {is_work: this.iswork?1:0};
-				console.log(this.iswork)
-				await this.$api.refreshToken().then(res => {
-					this.$store.commit('set_token',res.data.access_token);
-					console.log(JSON.stringify(res.data.access_token))
-				})
+			changework(){ //修改工作状态
+				this.userinfo.is_work = !this.userinfo.is_work;
+				let data = {is_work: this.userinfo.is_work?1:0};
 				this.$api.checkwork(data).then(res => {
 					if(res.status == 'success' && res.status_code ==200){
-						console.log(JSON.stringify(res))
+						this.$mUtils.msg({title:res.data.message})
+						this.getCurInfo()
 					}
 				})
 			},
-			jumppage(){ //跳转钱包
-				this.$mRouterConfig.push({router: this.$mRouter.wallet})
+			jumppage(target){ //跳转钱包
+				this.$mRouterConfig.push({router: this.$mRouter[`${target}`]})
 			},
-			// async getCurInfo(){ //获取骑手信息
-			// 	await this.$api.refreshToken().then(res => {
-			// 		this.$store.commit('set_token',res.data.access_token)
-			// 	})
-			// 	this.$api.courierinfo().then(res => {
-			// 		if(res.status == 'success' && res.status_code == 200){
-			// 			this.userinfo = res.data;
-			// 		}
-			// 	})
-			// }
+			getCurInfo(){ //获取骑手信息
+				this.$api.courierinfo().then(res => {
+					if(res.status == 'success' && res.status_code == 200){
+						console.log(JSON.stringify(res.data))
+						this.userinfo = res.data;
+					}
+				})
+			}
 		},
 		created() {
-			// this.getCurInfo()
+			this.getCurInfo()
 		}
 	}
 </script>
-
 <style lang="scss" scoped>
-	
-	page{background: #f2f2f2;color: #333; position: relative;}
 	.page{
-		position: absolute;
+		position: fixed;
 		top: 0;
 		left: 0;
 		bottom: 0;
 		right: 0;
-		width: 100%;
 		background-color: rgba(51, 51, 51, .2);
 		z-index: 99;
 		.conten{
@@ -138,8 +124,10 @@
 					line-height: 120upx;
 					padding-left: 30upx;
 					box-sizing: border-box;
-					.eosfont{
-						margin-right: 40upx;
+					image{
+						width: 42upx;
+						height: 38upx;
+						margin-right: 70upx;
 					}
 					&:nth-child(2){
 						background-color: #F5F5F5; 

@@ -12,7 +12,7 @@
 			<view class="option grace-flex grace-flex-vcenter grace-flex-center">
 				<text @click="jump('codeL')">手机快捷登陆</text>
 				<view></view>
-				<text @click="jump('zpwd')">忘记面目</text>
+				<text @click="jump('zpwd')">忘记密码</text>
 			</view>
 		</view>
 	</view>
@@ -46,13 +46,13 @@
 				if(checkRes){ //验证成功
 					uni.showLoading({title: '登陆中'});
 					this.$api.login(params).then(res => {
-						// console.log(JSON.stringify(res))  //登陆成功 待处理
+						console.log(JSON.stringify(res))
 						if(res.status == 'success' && res.status_code == 200){
 							uni.hideLoading()
 							this.$store.commit('set_token',res.data.token.access_token); //保存token至本地
 							this.$store.commit('set_info',res.data.courier) //保存用户信息至本地
 							this.$mUtils.msg({title:'登陆成功'})
-							this.$mRouterConfig.redirectTo({router:this.$mRouter.home})
+							this.$mRouterConfig.switchTab({router:this.$mRouter.home})
 						}
 					})
 				}
@@ -83,9 +83,12 @@
 				&:after{
 					display: inline-block;
 					content: '';
-					width: 12upx;
-					height: 20upx;
-					background-color: #333333;
+					width: 28upx;
+					height: 22upx;
+					background-image: url('~@/static/LoginImg/back.png');
+					background-repeat: no-repeat;
+					background-position: center;
+					background-size: 28upx 22upx;
 					margin-left: 20upx;
 				}
 			}

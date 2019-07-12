@@ -1,0 +1,2 @@
+setCssToHead(["body { background-color: #F2F2F2; }\n.",[1],"my-info .",[1],"setting { margin-top: ",[0,30],"; margin-bottom: ",[0,90],"; background-color: #FFFFFF; font-size: ",[0,30],"; font-weight: 800; line-height: ",[0,80],"; padding: 0 ",[0,30],"; }\n.",[1],"my-info wx-image { width: ",[0,20],"; height: ",[0,36],"; }\n.",[1],"my-info wx-button { margin: 0 ",[0,30],"; }\n",],undefined,{path:"./pages/index/myinfo/myinfo.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/index/myinfo/myinfo.wxml') } }));

@@ -26,7 +26,7 @@ Vue.prototype.$mUtils = $mUtils
 */
 $mRouterConfig.beforeEach((navType,to) => {
 	if(to.router == undefined ) return ('请配置跳转页面的名字',JSON.stringify(to));
-	
+	// console.log(JSON.stringify(to))
 	if(to.router.requiresAuth){//需要权限的页面
 		if(store.getters.hasLogin){ //登陆状态:已登录
 			uni[navType]({
@@ -45,11 +45,15 @@ $mRouterConfig.beforeEach((navType,to) => {
 })
 
 
-// $api.refreshToken().then(res => {
-// 	if(res.status == 'success' && res.status_code == 200){
-// 		store.commit('set_token',res.data.access_token)
-// 	}
-// });
+// setInterval(()=>{
+// 	$api.refreshToken().then(res => {
+// 		if(res.status == 'success' && res.status_code == 200){
+// 			store.commit('set_token',res.data.access_token)
+// 		}
+// 	});
+// },10000)
+
+
 // 
 // console.log('这个页面是每次都访问')
 

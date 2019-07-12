@@ -21,22 +21,38 @@ export default{
 	// 权限路径
 	home:{
 		name: '首页',
-		path: '/pages/index/index',
-		requiresAuth: true
+		path: '/pages/index/index'
 	},
 	OrderDetails:{
 		name: '订单详情',
-		path: '/pages/index/OrderDetails/OrderDetails',
-		requiresAuth: true
+		path: '/pages/index/OrderDetails/OrderDetails'
 	},
 	wallet:{
 		name: '钱包',
-		path: '/pages/wallet/wallet',
-		requiresAuth: true
+		path: '/pages/wallet/wallet'
 	},
 	walletdetail:{
 		name: '钱包明细',
-		path: '/pages/wallet/walletdetail/walletdetail',
-		requiresAuth: true
+		path: '/pages/wallet/walletdetail/walletdetail'
+	},
+	withdraw:{
+		name: '申请提现页面',
+		path: '/pages/wallet/withdraw/withdraw'
+	},
+	ordertoday:{
+		name: '申请提现页面',
+		path: '/pages/wallet/ordertoday/ordertoday'
+	},
+	bindcar:{
+		name: '绑定银行卡',
+		path: '/pages/wallet/bindcar/bindcar'
+	},
+	myinfo:{
+		name: '个人中心',
+		path: '/pages/index/myinfo/myinfo'
+	},
+	kefu:{
+		name: '个人中心',
+		path: '/pages/index/myinfo/customer/customer'
 	}
 }
